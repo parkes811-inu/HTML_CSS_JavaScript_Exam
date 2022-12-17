@@ -7,6 +7,7 @@
     <!-- UTF-8은 웹 브라우저에서 사용되는 대표적인 인코딩 방식이다.-->
     <meta charset="UTF-8"> 
 
+    <!-- 시작 태그만 있고, 종료태그가 없는 태그를 빈 태그라고 한다.-->
     <!--예전에 자주 사용되던 IE의 HTML파일이 어떻게 호환이 되어서 출력할 것인지 지정하는 옵션-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -36,11 +37,89 @@
                  <!-- 화면에 실제 출력되는 내용들을 담고 있다.-->
     <h1>Hello World</h1>
 
+    <!--br Tag를 입력하면 줄바꿈이 된다.-->
+    <h2> br Tag <br> Exam </h2>
+
+    <!-- 실제 내 블로그에 있는 사진을 가져오는 예시
+         img는 image의 약자로 사진을 가져 올 수 있다.
+         src는 source의 약자로 이미지 경로를 입력한다.
+         alt는 alternative의 약자로 이미지에 대한 이름을 설정할 수 있다. -->
+    <img src="https://tistory1.daumcdn.net/tistory/5782638/attach/7407fb0e17904e14ad5caecdccd881f6" 
+    alt="Eunseo" 
+    style=
+    "width: 200;"
+    height="200" >
+   
+      
+   <br>
     <!-- a태그는 Anchor태그에 약자로 참조할 수 있는
          링크를 걸 수 있고, 그 링크로 이동을 시켜준다.-->
     <!-- About이라는 글씨를 클릭하면 about.html로 이동한다.-->     
     <a href="./about.html">
       About
     </a>
+    
+</body>
+</html><!DOCTYPE html>  <!-- HTML 코드가 브라우저에서 해석 될 때 어떤 버전을 이용할 것 인지 -->
+<html lang="ko"> <!-- html 내용에 주된 언어는 한국어로 설정한다 -->
+                 <!-- html은 head 부분과, body 범위로 나뉜다.-->
+<head>           <!-- html의 정보를 담고 있다.-->
+    <!--문자 인코딩의 값이 UTF-8로 설정되어있다.-->
+    <!--문자 인코딩은 화면에 출력되는 글자들을 어떠한 방식으로 출력할 것인가를 의미한다. -->
+    <!-- UTF-8은 웹 브라우저에서 사용되는 대표적인 인코딩 방식이다.-->
+    <meta charset="UTF-8"> 
+
+    <!-- 시작 태그만 있고, 종료태그가 없는 태그를 빈 태그라고 한다.-->
+    <!--예전에 자주 사용되던 IE의 HTML파일이 어떻게 호환이 되어서 출력할 것인지 지정하는 옵션-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--viewport는 화면(모바일)을 의미, content 가로 너비는 모바일 디바이스 화면과 같은 크기, 
+      initial-scale은 축소비율을 의미 1.0은 화면 축소를 하지 않는다는 것을 나타낸다.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--탭 부분에 나타낼 제목을 적는 부분이다.-->
+    <title>Document</title>
+
+    <!-- rel : Realtionship, 속성, href : Hypertext Reference-->
+    <!-- href="" 안에 내용은 가져 올 파일을 적어준다. 
+         이렇게 되면 html파일에 css파일을 연결할 수 있게 된다.
+    -->  
+    <link rel="stylesheet" href="./main.css">
+    
+    <!-- src라는 속성에 js파일을 입력하면 연결할 수 있게 된다.-->
+    <!-- defer 코드를 입력함으로써 html의 body부분을 제대로 처리할 수 있게된다. -->
+    <!-- defer 속성은 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행됨을 명시하는 코드로
+    불리언 속성을 가지고, 명시하지않으면, false 값을 갖고, 명시하면 true 값을 가지게 된다.-->
+    <script defer src="./main.js">
+
+    </script>
+</head>
+
+<body>           <!-- html의 구조를 담고 있다.-->
+                 <!-- 화면에 실제 출력되는 내용들을 담고 있다.-->
+    <h1>Hello World</h1>
+
+    <!--br Tag를 입력하면 줄바꿈이 된다.-->
+    <h2> br Tag <br> Exam </h2>
+
+    <!-- 실제 내 블로그에 있는 사진을 가져오는 예시
+         img는 image의 약자로 사진을 가져 올 수 있다.
+         src는 source의 약자로 이미지 경로를 입력한다.
+         alt는 alternative의 약자로 이미지에 대한 이름을 설정할 수 있다. -->
+    <img src="https://tistory1.daumcdn.net/tistory/5782638/attach/7407fb0e17904e14ad5caecdccd881f6" 
+    alt="Eunseo" 
+    style=
+    "width: 200;"
+    height="200" >
+   
+      
+   <br>
+    <!-- a태그는 Anchor태그에 약자로 참조할 수 있는
+         링크를 걸 수 있고, 그 링크로 이동을 시켜준다.-->
+    <!-- About이라는 글씨를 클릭하면 about.html로 이동한다.-->     
+    <a href="./about.html">
+      About
+    </a>
+    
 </body>
 </html>
