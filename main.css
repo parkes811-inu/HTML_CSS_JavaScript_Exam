@@ -1,3 +1,220 @@
 h1{
   color: red;
+  font-size: 50px;
+  font-weight: 900;
+  border: 4px solid;
+}
+
+/*가상 클래스 :hover
+  html 요소에 마우스를 올릴 때만 
+  색이 바뀐다.*/ 
+  a:hover{
+    color: yellowgreen;
+  }
+  
+/*가상 클래스 :active
+  html 요소에 마우스를 클릭하고 있는
+  동안에만 색이 바뀐다.*/
+.eunseo:acitve{
+  color: rgb(35, 44, 54); 
+}
+
+/*글꼴과 속성요소를 이용해 다양하게 표현하기
+  font-size는 디폴트 값이 16px이다.*/
+.container {
+  
+  /*글자의 크기*/
+  font-size: 22px;
+
+  /*글자의 두께*/
+  font-weight: 900px;
+
+  /*글꼴의 종류*/
+  font-family: Arial, Helvetica, sans-serif;
+
+  /*글자들의 줄 높이, 행간
+    폰트 사이즈 * line-height
+    22px * 2 = 44px이 줄 높이로 설정되어있다. */
+  line-height: 2;
+
+  /* 글의 정렬 
+     right, left, center가 있다.*/
+  text-align: center;
+
+  /*글짜들의 색깔 지정*/
+  color: red;
+
+  /*글자들을 꾸미는 용도*/
+  text-decoration: underline;
+  /*띄어쓰기를 기준으로 줄바꿈 처리
+    영어는 띄어쓰기를 기준으로 하나의 단어로 인식,
+    한글은 한 글자를 기준으로 하나의 단어로 인식되기때문에
+    아래 코드는 한글 페이지에서 자주 사용*/
+  word-break: keep-all;
+}
+
+.back_ground {
+  width: 300px;
+  height: 150px;
+
+  /*클래스 요소에 배경색 설정*/
+  background-color: blue;
+
+  /*클래스 배경 이미지를 설정
+    url 내 이미지 경로를 입력하면된다.*/
+  background-image: url("https://tistory1.daumcdn.net/tistory/5782638/attach/7407fb0e17904e14ad5caecdccd881f6");
+
+  /*배경 이미지의 사이즈 설정*/
+  background-size: 100px;
+
+  /*배경 이미지의 반복 설정을 하지 않을 떄*/
+  background-repeat: no-repeat;
+
+  /*배경 이미지 위치 설정*/
+  background-position: center center;
+}
+
+/*박스 요소 수평 정렬하기*/
+/*box_model 클래스와 자식 요소 item으로 구성*/
+.box_model {
+  height: 200px;
+  border: 4px solid black;
+
+  /*수직으로 정렬되는 .item 요소들을 수평으로 정렬하기 위해 
+    display 속성에 값을 flex로 설정한다.
+    수평으로 정렬하고자 하는 요소들의 부모 요소에서 사용해야한다.*/
+  display: flex;
+
+  /*box_model의 자식요소인 .item 요소들이 수평 정렬된다.*/
+  justify-content: center;
+
+  /*.item 요소들이 수직에서 맨 위에 정렬된다.*/
+  align-items: start;
+
+  /*.item 요소들 사이 사이 갭 (간격)을 만들어준다.*/
+  gap: 10px;
+}
+
+/*띄어쓰기는 하위 선택자( 모든 .item요소를 지칭)*/
+.box_model .item {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+
+  /*여기서 사용되는 display, justify-content, align-items의
+    속성과 값들은 .item 요소 내부에 있는 컨텐츠(내용)들의 
+    위치에 대해 설정하는 부분이다.*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*변환 효과 적용하기 - 이동, 회전, 크기 비율 지정*/
+.changeEffect {
+  height: 100px;
+  border: 4px solid black;
+}
+
+.changeEffect .new_item {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+
+  /* 변환 효과를 지정하는 속성*/
+  /* translate(변환함수)는 이동하고 싶은 거리만큼 입력한다.*/
+  /* 요소에 회전을 시켜주는 속성, deg는 degree(도)의 약어 */
+  /* 현재 요소에 크기를 숫자만큼 배율로 조절할 수 있는 scale 속성*/
+  transform: 
+    translateX(50px) translateY(-50px) 
+    rotate(45deg) scale(0.5);
+
+  /*박스 요소의 모서리 부분 다듬기, radius*/
+  border-radius: 10%;
+}
+
+/*전환 효과 - 애니메이션 적용하기*/
+.Animation {
+  height: 100px;
+  border: 4px solid black;
+}
+
+.Animation .Ani_item {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+
+  /*전환 효과 - transition
+    이 효과를 적용하려면 바뀌기 전, 바뀌고난 후 상태에서
+    바뀌기 전 상태에서 설정해야한다.
+    s는 second의 약자, 바뀌기 전 상태와
+    바뀔 상태가 자연스러운 애니메이션 효과로 적용된다.*/
+  transition: 0.4s ;
+}
+
+/*마우스 커서를 올렸을 때 동작하는 선택자 hover
+  transition 후 상태 동작 부분 */
+.Animation .Ani_item:hover {
+  transform: rotate(45deg);
+  background-color: orange;
+  border-radius: 50%;
+}
+
+/* 화면에 크기에 맞게 CSS를 바꾸는 media query */
+.change_CSS {
+  height: 100px;
+  border: 10px solid black;
+}
+
+.change_CSS .CSS_item {
+  width: 200px;
+  height: 100px;
+  background-color: royalblue;
+}
+
+/* 사용자 화면에 가로너비가 700px 이하라면
+   위에서 정의한 내용과 다르게 보여줄 수 있다.*/
+@media (max-width: 700px) {
+  
+  /*사용자 화면이 700px 이하라면 배경, 선 색깔이
+    새롭게 바뀌게 된다.*/
+
+  /* 이 내용들을 바탕으로 반응형 웹을 작성할 수 있다.*/  
+  .change_CSS {
+    height: 200px;
+    border: 10px solid red;
+    background-color: orange;
+  }
+
+  .change_CSS .CSS_item {
+    width: 100px;
+    height: 300px;
+  }
+}
+
+/*버튼(클릭하세요)에 디자인 요소*/
+.btn {
+  width: 150px;
+  height: 40px;
+  background-color: rosybrown;
+  border-radius: 10px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*사용자가 요소에 마우스를 갖다대면 손가락 모양으로 바뀐다.*/
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: blue;
+}
+
+/*main.js에서 innerHTML을 이용해 요소의 속성을 
+  바꾸고 그 요소에 대해 새로운 값을 적용*/
+.btn span{
+  font-size: 22px;
+  font-weight: 700;
 }
